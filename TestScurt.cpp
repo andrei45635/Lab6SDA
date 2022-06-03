@@ -49,5 +49,5 @@ void testall() {
 void testAll() {
 	std::chrono::milliseconds timespan(90);
 	std::this_thread::sleep_for(timespan);
-	//testall();
+	testall();
 }

@@ -196,10 +196,10 @@ void testQuantity() {
 
 
 void testAllExtins() {
-	std::chrono::milliseconds timespan(25000);
+	std::chrono::milliseconds timespan(1000);
 	std::this_thread::sleep_for(timespan);
-	//testCreeaza();
-	//testAdauga();
-	//testSterge();
-	//testQuantity();
+	testCreeaza();
+	testAdauga();
+	testSterge();
+	testQuantity();
 }
