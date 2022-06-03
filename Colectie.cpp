@@ -325,6 +325,36 @@ int Colectie::eliminaRec(int curent, int anterior, TElem e)
 		return eliminaRec(drept[curent], curent, e);
 }
 
+/*
+* CF: 0(1)
+* CD: 0(n*m)
+* CM: O(n*m)
+* CG: O(n*m)
+*
+* subalgoritm adaugaToateElementele(Colectie b)
+*	  it <- iterator(b)
+*	  pentru i <- 0, size(b), 1, executa
+*		 elem <- element(it)
+*		 daca(size(b) + size(c) > size(c)) 
+*			resize()
+*			adauga(elem)
+*		 altfel 
+*			adauga(elem)
+*		 sfDaca
+*	  sfPentru
+*/
+
+void Colectie::adaugaToateElementele(const Colectie& b) {
+	auto it = b.iterator();
+	for (int i = 0; i < b.size; i++) {
+		auto elem = it.element();
+		if (b.size + this->size > this->size) {
+			resize();
+			adauga(elem);
+		} else adauga(elem);
+	}
+}
+
 // O(n) - inaltimea curenta a arborelui
 // cf: theta(1) - elementul este radacina
 // cd: theta(n) - elementele sunt adaugate in ordine cresc/desc
