@@ -45,7 +45,7 @@ private:
 
 	// sterge o aparitie a unui element din colectie recursiv
 	bool stergeRec(int curent, int anterior, TElem e);
-
+	
 	// elimina toate aparitiile unui element din colectie recursiv
 	int eliminaRec(int curent, int anterior, TElem e);
 
@@ -68,6 +68,9 @@ public:
 	// returneaza numarul de elemente eliminate
 	int eliminaToateAparitiile(TElem elem);
 
+	//adauga toate elementele colectiei b in colectia curenta
+	void adaugaToateElementele(const Colectie& b);
+	
 	// verifica daca un element se afla in colectie
 	bool cauta(TElem elem) const;
 
